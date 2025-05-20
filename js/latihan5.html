@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function tekan(){
+            var jurusanstr = (document.form.Jurusan.value)
+            document.form.jurusan.value = jurusanstr
+        }
+    </script>
+    <form name="form">
+        <h1>Prodi di Fakultas Teknik & Informatika</h1><br>
+        Pilihan Prodi : <select name="Jurusan" size="1">
+            <option value="Teknik Informatika">Teknik informatika</option>
+            <option value="Sistem Komputer">Sistem Komputer></option>
+            <option value="Teknik Elektro">Teknik Elektro</option>
+            <option value="Teknil Sipil">Teknik Sipil</option>
+        </select>
+        <p><input type="button" value="kirim" onclick="tekan()">
+        <input type="reset" value="ulang">
+    <h3>Prodi saya :</h3>
+<input type="text" name="jurusan" size="30"></p>
+    </form>
+</body>
+</html>

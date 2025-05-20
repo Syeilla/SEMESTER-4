@@ -1,0 +1,100 @@
+<html>
+<head>
+    <title>Latihan 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        form[name="formm"] {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 400px;
+            margin: 0 auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 10px;
+        }
+        td {
+            padding: 5px 10px;
+            vertical-align: middle;
+            color: #555555;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px 10px;
+            font-size: 14px;
+            border: 1px solid #a3c0ff;
+            border-radius: 4px;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus {
+            border-color: #0056b3;
+            box-shadow: 0 0 5px rgba(0,86,179,0.5);
+        }
+        input[type="button"], input[type="reset"] {
+            padding: 8px 16px;
+            font-size: 14px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+        input[type="button"] {
+            background-color: #0056b3;
+            color: white;
+        }
+        input[type="button"]:hover {
+            background-color: #003d80;
+        }
+        input[type="reset"] {
+            background-color: #d9534f;
+            color: white;
+        }
+        input[type="reset"]:hover {
+            background-color: #b52b27;
+        }
+        h3 {
+            color: #333333;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function tekan() {
+            var namastr = document.formm.Deskripsi.value;
+            document.formm.Hasilnya.value = namastr;
+        }
+    </script>
+
+    <form name="formm">
+        <h1>Input Deskripsi Mahasiswa</h1>
+        <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+            <b style="font-size: 17;">Bagikan Cerita Tentangmu</b>
+        </p>
+        <input type="textarea" name="25" id="Deskripsi"><br><br>
+
+        <td colspan="3" align="left">
+            <input type="button" value="OK" onclick="tekan()">
+            <input type="reset" value="Hapus">
+        </td>
+
+        <h3>Hasilnya:</h3>
+        <input type="textarea" name="25" id="Hasilnya">
+        </form>

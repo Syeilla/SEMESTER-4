@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Detail Produk</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <div class="menu2">
+        <a href="index.html">Kembali</a>
+      </div>
+
+  <!-- <div class="menu">
+    <a href="index.html">Beranda</a>
+    <a href="keranjang.html">Keranjang</a>
+    <a href="beli.html">Checkout</a>
+    <a href="profile.html">Profile</a>
+    <a href="tentangkami.html" class="active">Tentang Kami</a>
+    <a href="welcome.html">Logout</a>
+  </div> -->
+
+  <div class="sidebar">
+    <a href="infosms.html">
+      <img src="../assets/img/samsung.png" class="brand-logo">
+    </a>
+    <a href="detailhp.html">
+      <img src="../assets/img/iphone.png" class="brand-logo">
+    </a>
+    <a href="detailhp.html">
+      <img src="../assets/img/oppo.png" class="brand-logo">
+    </a>
+    <a href="detailhp.html">
+      <img src="../assets/img/xiaomi.png" class="brand-logo">
+    </a>
+  </div>
+
+  <div class="content">
+    <div class="product-detail">
+      <div class="detail-image">
+        <img src="../assets/img/samsunga55.jpg" class="detail-img">
+        <div>
+        <a href="iklan.html"><button class="btn">Informasi Produk</button></a>
+      </div>
+      </div>
+      <div class="detail-info">
+        <h2>Samsung Galaxy A55</h2>
+        <p class="price">Rp 4.500.000</p>
+        <div class="specs">
+          <h3>Spesifikasi:</h3>
+          <ul>
+            <li><strong>Layar:</strong> 6.5" Super AMOLED, 120Hz</li>
+            <li><strong>Prosesor:</strong> Exynos 1480</li>
+            <li><strong>RAM:</strong> 8GB</li>
+            <li><strong>Penyimpanan:</strong> 128GB (expandable)</li>
+            <li><strong>Kamera Belakang:</strong> 50MP + 12MP + 5MP</li>
+            <li><strong>Kamera Depan:</strong> 32MP</li>
+            <li><strong>Baterai:</strong> 5000mAh</li>
+            <li><strong>OS:</strong> Android 14</li>
+          </ul>
+        </div>
+        <div class="action-buttons">
+          <button class="btn keranjang">Tambah ke Keranjang</button>
+          <button class="btn beli">Beli Sekarang</button>
+          <!-- <a href="index.html"><button class="btn beli">Kembali</button></a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<script>
+    // Data produk
+    const products = {
+      1: {
+        name: "Samsung Galaxy A55",
+        price: "Rp 4.500.000",
+        image: "../assets/img/samsunga55.jpg",
+        specs: [
+          "Layar: 6.5\" Super AMOLED, 120Hz",
+          "Prosesor: Exynos 1480",
+          "RAM: 8GB",
+          "Penyimpanan: 128GB (expandable)",
+          "Kamera Belakang: 50MP + 12MP + 5MP",
+          "Kamera Depan: 32MP",
+          "Baterai: 5000mAh",
+          "OS: Android 14"
+        ]
+      },
+      2: {
+        name: "iPhone 15",
+        price: "Rp 20.000.000",
+        image: "../assets/img/iphone15.jpeg",
+        specs: [
+          "Layar: 6.1\" Super Retina XDR",
+          "Prosesor: A16 Bionic",
+          "RAM: 6GB",
+          "Penyimpanan: 128GB",
+          "Kamera Belakang: 48MP + 12MP",
+          "Kamera Depan: 12MP",
+          "Baterai: 3349mAh",
+          "OS: iOS 17"
+        ]
+      },
+      3: {
+        name: "OPPO A55",
+        price: "Rp 3.000.000",
+        image: "../assets/img/oppoa55.jpeg",
+        specs: [
+          "Layar: 6.5\" IPS LCD",
+          "Prosesor: MediaTek Helio G35",
+          "RAM: 4GB",
+          "Penyimpanan: 64GB (expandable)",
+          "Kamera Belakang: 50MP + 2MP + 2MP",
+          "Kamera Depan: 16MP",
+          "Baterai: 5000mAh",
+          "OS: Android 11"
+        ]
+      },
+      4: {
+        name: "XIAOMI 14T PRO",
+        price: "Rp 7.500.000",
+        image: "../assets/img/xiaomi14tpro.jpg",
+        specs: [
+          "Layar: 6.67\" AMOLED, 144Hz",
+          "Prosesor: Snapdragon 8 Gen 2",
+          "RAM: 12GB",
+          "Penyimpanan: 256GB",
+          "Kamera Belakang: 50MP + 8MP + 2MP",
+          "Kamera Depan: 20MP",
+          "Baterai: 5000mAh",
+          "OS: Android 13"
+        ]
+      },
+      5: {
+        name: "Samsung Galaxy S24 Ultra",
+        price: "Rp 25.000.000",
+        image: "../assets/img/k1.jpeg",
+        specs: [
+          "Layar: 6.8 Dynamic AMOLED 2X, 120Hz, QHD+ (3088 x 1440)",
+          "Prosesor: Snapdragon 8 Gen 3 (Global) / Exynos 2400 (tergantung wilayah)",
+          "RAM: 12GB",
+          "Penyimpanan: 256GB/512GB/1TB (tanpa slot microSD)",
+          "Kamera Belakang: 200 MP (wide) + 50 MP (periscope zoom 5x) + 12 MP (ultrawide) + 10 MP (telephoto 3x)",
+          "Kamera Depan: 12 MP",
+          "Baterai: 5,000 mAh, fast charging 45W, wireless charging 15W",
+          "OS: Android 14 (One UI 6.1)"
+        ]
+      },
+      6: {
+        name: "Samsung Galaxy Z Flip 5 (Foldable)",
+        price: "Rp 18.000.000",
+        image: "../assets/img/k2.jpeg",
+        specs: [
+          "Layar: 6.7 FHD+ AMOLED, 120Hz",
+          "Prosesor: Snapdragon 8 Gen 2",
+          "RAM: 8GB",
+          "Penyimpanan: 256GB/512GB",
+          "Kamera Belakang: Dual 12 MP (wide + ultrawide)",
+          "Kamera Depan: 10 MP (punch-hole)",
+          "Baterai: 3,700 mAh, fast charging 25W, wireless charging 15W",
+          "OS: Android 13 (upgradeable to Android 14)"
+        ]
+      },
+      7: {
+        name: "Samsung Galaxy A54 5G (Mid-Range)",
+        price: "Rp 8.000.000",
+        image: "../assets/img/k3.jpeg",
+        specs: [
+          "Layar: 6.4 Super AMOLED, 120Hz, FHD+ (1080 x 2340)",
+          "Prosesor: Exynos 1380",
+          "RAM: 12GB",
+          "Penyimpanan: 256GB/512GB/1TB (tanpa slot microSD)",
+          "Kamera Belakang: 50 MP (wide) + 12 MP (ultrawide) + 5 MP (macro)",
+          "Kamera Depan: 32 MP",
+          "Baterai: 5,000 mAh, fast charging 25W",
+          "OS: Android 13 (One UI 5.1), upgradable ke Android 14"
+        ]
+      },
+      8: {
+        name: "Samsung Galaxy M34 5G (Budget Mid-Range)",
+        price: "Rp 5.000.000",
+        image: "../assets/img/k4.jpeg",
+        specs: [
+          "Layar: 6.5 Super AMOLED, 120Hz, FHD+",
+          "Prosesor: Exynos 1280",
+          "RAM: 6GB/8GB",
+          "Penyimpanan: 128GB (microSD up to 1TB)",
+          "Kamera Belakang: 50 MP (wide) + 8 MP (ultrawide) + 2 MP (macro)",
+          "Kamera Depan: 13 MP",
+          "Baterai: 6,000 mAh, fast charging 25W",
+          "OS: Android 13 (One UI 5.1)"
+        ]
+      },
+      9: {
+        name: "Samsung Galaxy A15 5G (Entry-Level)",
+        price: "Rp 3.500.000",
+        image: "../assets/img/k.jpeg",
+        specs: [
+          "Layar: 6.5 Super AMOLED, 90Hz, FHD+",
+          "Prosesor: Dimensity 6100+",
+          "RAM: 4GB/6GB",
+          "Penyimpanan: 128GB (microSD up to 1TB)",
+          "Kamera Belakang: 50 MP (wide) + 5 MP (ultrawide) + 2 MP (macro)",
+          "Kamera Depan: 13 MP",
+          "Baterai: 5,000 mAh, fast charging 25W",
+          "OS: Android 14 (One UI 6)"
+        ]
+      },
+      10: {
+        name: "Samsung Galaxy XCover 6 Pro (Rugged)",
+        price: "Rp 4.000.000",
+        image: "../assets/img/k7.jpeg",
+        specs: [
+          "Layar: 6.6 FHD+ LCD, 120Hz",
+          "Prosesor: Snapdragon 778G",
+          "RAM: 6GB",
+          "Penyimpanan: 128GB (microSD up to 1TB)",
+          "Kamera Belakang: Dual 50 MP + 8 MP (ultrawide)",
+          "Kamera Depan: 13 MP",
+          "Baterai: 4,050 mAh (removable), fast charging 15W",
+          "OS: Android 12 (upgradable)"
+        ]
+      },
+      11: {
+        name: "Samsung Galaxy S24 UltraSamsung Galaxy S23 FE (Fan Edition)",
+        price: "Rp 11.000.000",
+        image: "../assets/img/k8.jpeg",
+        specs: [
+          "Layar: 6.4 Dynamic AMOLED 2X, 120Hz, FHD+ (2340 x 1080)",
+          "Prosesor: Exynos 2200 (Global) / Snapdragon 8 Gen 1 (tergantung wilayah)",
+          "RAM: 8GB",
+          "Penyimpanan: 128GB/256GB (tanpa slot microSD)",
+          "Kamera Belakang: 50 MP (wide, OIS) + 12 MP (ultrawide) + 8 MP (telephoto, 3x zoom)",
+          "Kamera Depan: 10 MP",
+          "Baterai: 4,500 mAh, fast charging 25W, wireless charging 15W",
+          "OS: Android 13 (One UI 5.1), upgradable ke Android 14"
+        ]
+      },
+      12: {
+        name: "Samsung Galaxy F54 5G (Mid-Range India/Asia)",
+        price: "Rp 5.500.000",
+        image: "../assets/img/k9.jpeg",
+        specs: [
+          "Layar: 6.7 Super AMOLED Plus, 120Hz, FHD+ (2400 x 1080)",
+          "Prosesor: Exynos 1380",
+          "RAM: 8GB",
+          "Penyimpanan: 256GB (microSD up to 1TB)",
+          "Kamera Belakang: 108 MP (wide, OIS) + 8 MP (ultrawide) + 2 MP (macro)",
+          "Kamera Depan: 32 MP",
+          "Baterai: 6,000 mAh, fast charging 25W",
+          "OS: Android 13 (One UI 5.1)"
+        ]
+      },
+    };
+
+    // Ambil parameter ID dari URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
+    const product = products[productId];
+
+    // Jika produk yang dicari ada, update halaman
+    if (product) {
+      document.title = product.name + " - Detail Produk";
+      
+      // Update isi HTML
+      document.querySelector('.detail-img').src = product.image;
+      document.querySelector('.detail-info h2').textContent = product.name;
+      document.querySelector('.price').textContent = product.price;
+      
+      const specsList = document.querySelector('.specs ul');
+      specsList.innerHTML = '';
+      
+      product.specs.forEach(spec => {
+        const [key, value] = spec.split(': ');
+        const li = document.createElement('li');
+        li.innerHTML = `<strong>${key}:</strong> ${value}`;
+        specsList.appendChild(li);
+      });
+
+      document.querySelector('.keranjang').addEventListener('click', () => {
+        alert(`${product.name} telah ditambahkan ke keranjang!`);
+      });
+
+      document.querySelector('.beli').addEventListener('click', () => {
+        alert(`Anda akan membeli ${product.name}`);
+      });
+    } else {
+      // Jika produk yang dicari tidak ada, kembali
+      window.location.href = 'index.html';
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Beranda</title>
+  <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
+
+  <style>
+    body {
+    margin: 0;
+    padding: 0;
+    background-color: #b3e5fc;
+    font-family: sans-serif;
+  }
+  
+  .box {
+    width: 500px;
+    padding: 20px;
+    margin: 70px auto;
+    background: white;
+    border: 2px solid #0288d1;
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .box1 {
+    width: 500px;
+    padding: 20px;
+    margin: 100px auto;
+    background: white;
+    border: 2px solid #0288d1;
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .box1 h2 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+  }
+  
+  .input-box {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #0288d1;
+    border-radius: 5px;
+  }
+
+  .btn, .btn1 {
+    display: inline-block;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    font-weight: 200;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .btn {
+    background-color: #0288d1;
+    color: white;
+    padding: 5px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 0;
+    box-shadow: 0 4px 10px rgba(78, 115, 223, 0.3);
+  }
+
+  .btn:hover {
+    background-color: #3a5bc7;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(78, 115, 223, 0.4);
+  }
+
+  .btn1 {
+    background-color: #9d9d9d;
+    color: white;
+    padding: 5px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(78, 115, 223, 0.3);
+  }
+
+  .btn1:hover {
+    background-color: #818488;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn:active, .btn1:active {
+    transform: translateY(1px);
+    opacity: 0.9;
+  }
+
+  .menu {
+    background-color: #0288d1;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  .menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+  }
+  
+  .menu a:hover {
+    text-decoration: underline;
+  }
+
+  .menu2 {
+    background-color: #0288d1;
+    padding: 10px;
+    text-align: right;
+    box-sizing: border-box;
+  }
+
+  .menu2 a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+  }
+  
+  .menu2 a:hover {
+    text-decoration: underline;
+  }
+  
+  .sidebar {
+    width: 58px;
+    background: #588ca8;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .brand-logo {
+    width: 35px;
+    height: 35px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .content {
+    margin-left: 80px;
+    padding: 20px;
+  }
+  
+  .product {
+    width: 200px;
+    background: white;
+    padding: 10px;
+    margin: 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 2px solid #0288d1;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .product-img {
+    width: 125px;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+        
+  /* body1 {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    } */
+        
+  .welcome-container {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+    }
+        
+  .welcome-box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    }
+
+  .welcome-box:hover {
+    transform: translateY(-5px);
+    }
+        
+  .logo {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Memastikan gambar tidak melebihi lingkaran */
+    box-shadow: 0 5px 15px rgba(78, 115, 223, 0.4);
+    }
+        
+  .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan gambar mengisi lingkaran dengan proporsi yang tepat */
+    }
+        
+  h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    }
+        
+  .wel {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    }
+        
+  .cta-button {
+    display: inline-block;
+    background-color: #4e73df;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 5px 15px rgba(78, 115, 223, 0.4);
+    }
+        
+  .cta-button:hover {
+    background-color: #3a5bc7;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(78, 115, 223, 0.6);
+    }
+        
+  .features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    }
+        
+  .feature-box {
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px;
+    width: 30%;
+    min-width: 250px;
+    margin: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    }
+        
+  .feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+        
+  .feature-icon {
+    font-size: 2.5rem;
+    color: #4e73df;
+    margin-bottom: 15px;
+    }
+        
+  .feature-title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #333;
+    }
+        
+  .feature-desc {
+    color: #777;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    }
+        
+  @media (max-width: 768px) {
+  .welcome-box {
+    padding: 30px 20px;
+    }
+            
+  h1 {
+    font-size: 2rem;
+    }
+            
+  .features {
+    flex-direction: column;
+    align-items: center;
+    }
+            
+  .feature-box {
+    width: 100%;
+    margin: 10px 0;
+    }
+  }
+  </style>
+
+</head>
+<body>
+
+  <div class="menu">
+    <a href="index.html">Beranda</a>
+    <a href="keranjang.html">Keranjang</a>
+    <a href="beli.html">Checkout</a>
+    <a href="profile.html">Profile</a>
+    <a href="welcome.html">Logout</a>
+  </div>
+
+  <div class="sidebar">
+    <img src="../assets/img/samsung.png" class="brand-logo">
+    <img src="../assets/img/iphone.png" class="brand-logo">
+    <img src="../assets/img/oppo.png" class="brand-logo">
+    <img src="../assets/img/xiaomi.png" class="brand-logo">
+  </div>
+
+  <div class="content">
+    <div class="welcome-container" id="welcome-container">
+      <!-- Welcome message will be inserted here by JavaScript -->
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const container = document.getElementById('welcome-container');
+
+      const welcomeBox = document.createElement('div');
+      welcomeBox.className = 'welcome-box';
+
+      const logoDiv = document.createElement('div');
+      logoDiv.className = 'logo';
+      const logoImg = document.createElement('img');
+      logoImg.src = '../assets/img/samsung.png';
+      logoImg.alt = 'Brand Logo';
+      logoDiv.appendChild(logoImg);
+
+      const heading = document.createElement('h1');
+      heading.textContent = 'Welcome to Our Store!';
+
+      const welcomeText = document.createElement('p');
+      welcomeText.className = 'wel';
+      welcomeText.textContent = 'Find the best smartphones with great deals and offers.';
+
+      const ctaButton = document.createElement('button');
+      ctaButton.className = 'cta-button';
+      ctaButton.textContent = 'Shop Now';
+      ctaButton.onclick = function() {
+        window.location.href = 'beli.html';
+      };
+
+      welcomeBox.appendChild(logoDiv);
+      welcomeBox.appendChild(heading);
+      welcomeBox.appendChild(welcomeText);
+      welcomeBox.appendChild(ctaButton);
+
+      container.appendChild(welcomeBox);
+    });
+  </script>
+
+</body>
+</html>

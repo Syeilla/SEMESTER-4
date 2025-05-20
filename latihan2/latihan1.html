@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nilai Mata Kuliah</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var nilai;
+        var status;
+        nilai = prompt("Masukkan nilai mata kuliah");
+        nilai = Number(nilai); // Convert input to a number
+
+        if (nilai >= 75 && nilai <= 100) {
+            status = "Anda lulus mata kuliah";
+        } else if (nilai < 75 && nilai >= 0) {
+            status = "Anda mengulang mata kuliah";
+        } else {
+            status = "Anda NGAWUR inputkan nilai mata kuliah";
+        }
+        document.write(status);
+    </script><br>
+    <button>
+        <a href="latihan1.html">
+            back
+        </a>
+    </button>
+</body>
+</html>

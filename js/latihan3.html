@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latihan 3 - Identifikasi Hobby</title>
+    <script language="JavaScript">
+        function radio_box(form) {
+            var selectedHobbies = [];
+            if (form.membaca.checked) {
+                selectedHobbies.push("Membaca");
+            }
+            if (form.olahraga.checked) {
+                selectedHobbies.push("Olahraga");
+            }
+            if (form.musik.checked) {
+                selectedHobbies.push("Musik");
+            }
+            if (form.traveling.checked) {
+                selectedHobbies.push("Traveling");
+            }
+            if (selectedHobbies.length === 0) {
+                alert("Silakan pilih minimal satu hobi!");
+                return;
+            }
+            alert("Saya memiliki hobi yaitu: " + selectedHobbies.join(", "));
+        }
+    </script>
+    <style>
+        form {
+            border: 1px solid #007bff;
+            padding: 20px;
+            width: 320px;
+            border-radius: 6px;
+            background-color: rgb(219, 218, 218);
+        }
+        label.radio-box {
+            display: block;
+            border: 1px solid #007bff;
+            padding: 8px 12px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            user-select: none;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form name="form">
+        <h1>Identifikasi Hobby Saya</h1>
+        <label class="radio-box"><input type="checkbox" name="membaca" id="membaca">Membaca</label>
+        <label class="radio-box"><input type="checkbox" name="olahraga" id="olahraga">Olahraga</label>
+        <label class="radio-box"><input type="checkbox" name="musik" id="musik">Musik</label>
+        <label class="radio-box"><input type="checkbox" name="traveling" id="traveling">Traveling</label><br>
+        <input type="button" value="Identifikasi" onclick="radio_box(this.form)">
+        <input type="reset" value="Hapus">
+    </form>
+</body>
+</html>

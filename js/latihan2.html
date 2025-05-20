@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latihan 2</title>
+    <script language="JavaScript">
+        function radio_box(form) {
+            var ket = "";
+            if (form.wanita.checked == true) {
+                ket = "Wanita";
+            } else if (form.pria.checked == true) {
+                ket = "Pria";
+            } else {
+                alert("Silakan pilih gender terlebih dahulu!");
+                return;
+            }
+            alert("Anda adalah seorang " + ket);
+        }
+    </script>
+    <style>
+        form {
+            border: 2px solid #007bff;
+            padding: 20px;
+            width: 320px;
+            border-radius: 6px;
+        }
+        label.radio-box {
+            display: block;
+            border: 1px solid #007bff;
+            padding: 8px 12px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            user-select: none;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form name="form">
+        <h1>Identifikasi Gender</h1>
+        <label class="radio-box"><input type="radio" name="gender" value="wanita" id="wanita">Wanita</label>
+        <label class="radio-box"><input type="radio" name="gender" value="pria" id="pria">Pria</label><br>
+        <input type="button" value="Identifikasi" onclick="radio_box(this.form)">
+        <input type="reset" value="Hapus">
+    </form>
+</body>
+</html>
